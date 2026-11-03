@@ -1,39 +1,76 @@
-# SpatialStudio Pro — Autonomous Generative & Curation Orchestrator
+# SpatialStudio Pro — Autonomous Social Media Visual Factory & Generative Orchestrator
 
-> **Enterprise Domain:** End-to-End Autonomous Visual Asset Generation, Multi-Model Curation & Social API Publishing  
+> **Enterprise Domain:** End-to-End Automated Social Media Content Production, Headless Diffusion Execution & Multi-Platform API Distribution  
 > **Core Backend:** Python 3.10+, FastAPI, Asynchronous Event-Driven Architecture (`asyncio`)  
-> **Inference Engines:** Headless ComfyUI Node Execution, Local Edge LLMs (Ollama Dolphin-Llama3, Gemma)  
-> **Guardrails & Security:** Algorithmic Perceptual Hashing (pHash / Hamming Distance), Cloudflare Tunnel (`cloudflared`)  
-> **Publishing Gateway:** Direct Meta Graph API (Instagram Carousel / Single / Reel Containers), Patreon Membership API  
+> **Inference Engines:** ComfyUI Headless Execution (PyTorch, CUDA), Local Edge LLMs (Ollama Dolphin-Llama3, Gemma)  
+> **Computer Vision & Guardrails:** Perceptual Hashing (`imagehash.phash` / Hamming Distance), OpenPose Skeleton Detection, Dynamic Watermarking  
+> **Publishing Gateway:** Direct Meta Graph API (Instagram Carousel / Single / Reel Containers), Patreon Membership API, Cloudflare Tunnel (`cloudflared`)  
 
 ---
 
-## 📌 Executive Summary
+## 🎯 What is SpatialStudio Pro? (Core Purpose & Mission)
 
-**SpatialStudio Pro** is a production-grade, autonomous visual content engineering and multi-channel publication orchestrator. Built specifically to eliminate human bottlenecks in generative design workflows, the system manages the complete lifecycle of architectural and spatial digital assets:
+**SpatialStudio Pro** is an **autonomous, end-to-end visual content production factory designed specifically for high-velocity social media management (Instagram, Patreon, etc.)**.
 
-1. **Procedural Prompt Synthesis:** Combinatorial parameter matrix generating balanced, production-ready diffusion prompts.
-2. **Headless Compute Dispatch:** Asynchronous reverse-proxy converting API requests into full LiteGraph UI workflows executed on ComfyUI backends.
-3. **Computer Vision Guardrails:** Perceptual hashing algorithms executing duplicate detection and visual quality control before storage.
-4. **Autonomous AI Curation:** Semantic grouping of raw renders into coherent multi-image narrative carousels.
-5. **Local Edge Copywriting:** Context-aware LLM agents extracting prompt metadata to draft platform-ready captions, technical specs, and hashtags.
-6. **Zero-Trust Cloud Ingestion:** Automatic Cloudflare tunneling delivering ephemeral HTTPS endpoints for external Meta Graph API ingest workers.
+Instead of manually crafting diffusion prompts, waiting for renders, sifting through hundreds of raw files, writing captions by hand, and scheduling social media posts one by one, SpatialStudio Pro unifies the entire content pipeline into a **continuous, automated production line**:
+
+```text
+[ Procedural Prompt Synthesis ] ──▶ [ Headless ComfyUI Batch Compute ] ──▶ [ Perceptual Duplicate Guardrail ]
+                                                                                         │
+[ Direct Instagram/Patreon Push ] ◀── [ Local LLM Caption & Hashtags ] ◀── [ Autonomous AI Match & Curation ]
+```
 
 ---
 
-## 🖥️ Operational Production Interfaces
+## ⚡ Key Capabilities at a Glance
+
+### 1. 📲 Automated Social Media Publishing (Direct Instagram & Patreon API)
+- **Direct 1-Click Publishing:** One-click deployment from the Curation Desk directly to Instagram via Meta Graph API v19+ or Patreon tiered posts.
+- **Carousel Container Creation:** Automatically packages 2 to 10 images into verified Instagram carousel containers, monitors container processing status via webhooks/polling, and executes live publication.
+- **24/7 Autopilot Background Daemon:** Set a post volume (e.g. 5 posts/day) and schedule intervals; the system runs autonomously in the background, matching images, drafting copy, and publishing at optimal engagement hours.
+- **Zero-Trust Cloudflare Gateway:** Automatically manages an ephemeral `cloudflared` tunnel, exposing local image buffers via secure signed HTTPS endpoints for Meta's content ingest crawlers without requiring static public IP addresses or risky open router ports.
+
+### 2. 🔍 Automated Asset Search, "AI Match" & Intelligent Curation
+- **"AI Match" Curation Engine:** Scans the visual asset library for unposted images (`nepostinti`) and automatically clusters them by visual cohesion, color palette, and architectural style into ready-to-post albums.
+- **Algorithmic Uniqueness Guarantee:** Built-in computer vision verification runs perceptual hashing (`pHash`) against the entire publication history. The interface immediately signals: `✓ Turinys unikalus (100% unikalumo)` to ensure no duplicate or near-duplicate frame is ever published twice.
+- **Perspective Interleaving:** Prevents visual monotony in multi-image carousels by intentionally alternating camera angles (e.g., Wide Establishing Shot ➔ Medium Architectural Detail ➔ Atmospheric Dusk ➔ Interior Courtyard).
+
+### 3. 🧪 Headless ComfyUI Batch Generation & Testing
+- **Headless Node Dispatch:** Generates prompts and sends them asynchronously to local or remote ComfyUI compute nodes via WebSockets and REST reverse-proxy.
+- **Batch Queuing (`+ Į EILĘ`):** Stack multiple variations, camera angles, and seeds into a batch queue for uninterrupted background rendering.
+- **Complete Pipeline Control:** Fine-tune image dimensions (e.g. 1080x1920 9:16 vertical for Instagram Stories/Reels), sampler steps, CFG scale, 1.5x upscaling, face/detail recovery (`Detailer`), film grain simulation, and latent noise injection.
+- **Bidirectional LiteGraph Injection:** ComfyUI API output typically strips visual UI canvas wires; SpatialStudio dynamically reconstructs full LiteGraph schemas (`nodes`, `links`, `extra_pnginfo`) into the PNG metadata, meaning any generated image can be dragged straight back into ComfyUI with all nodes neatly linked.
+
+### 4. 🎛️ LoRA Preset Management & Comparative Benchmarking
+- **Multi-LoRA Stacking & Weights:** Inspect, activate, and test multiple LoRA models simultaneously with granular strength weights (0.1 to 1.0).
+- **Trigger Word Resolution:** Automatically detects embedded LoRA activation keywords and injects them into the positive conditioning stream.
+- **Dedicated Test Mode (`Testas`):** Benchmark new model checkpoints or LoRA weight blends in an isolated test environment without polluting production asset libraries or database feeds.
+
+### 5. ✍️ Edge AI Copywriting Copilot (Local Ollama LLMs)
+- **Zero-Cloud Local Inference:** Powered by local quantization models (`dolphin-llama3`, `gemma`) running via Ollama at sub-second speeds (<0.8s).
+- **Metadata-Driven Context:** Automatically decompiles the image's embedded prompt tags (location, lighting, architectural style) and drafts engaging, platform-ready captions.
+- **Style Personas:** One-click tone switching across `Auto`, `Vibe`, `Hook` (viral engagement hook), `Lore` (deep technical/architectural narrative), and `Promo` (marketing call-to-action) with contextually relevant hashtags.
+
+### 6. 🎨 Advanced Spatial Tools
+- **Vaizdas Vaizde (Inpainting / Outpainting):** Mask-based localized regeneration and canvas expansion.
+- **Teminė Fotosesija (Thematic Studio 2.0):** Orchestrate multi-shot visual campaigns maintaining consistent lighting and style across varying locations.
+- **Pose & Structure Control (OpenPose):** Integrated skeleton detection and ControlNet injection for spatial composition.
+
+---
+
+## 🖥️ Production Interface Showcase
 
 ### 1. Modular Studio Prompt Composer
 ![Studio Prompt Composer](./assets/01_studio_prompt_composer.png)
-*Modular 8-axis parameter space with live prompt dock, resolution scaling, model profiles, and real-time inference dispatch.*
+*Procedural 8-axis parameter space (Vieta, Kamera, Oras, Scena, Medžiagos, Fonas, Stilius, Mixai) with live prompt dock, aspect ratio selector, LoRA stack, Detailer, and batch queue dispatch.*
 
 ### 2. High-Performance Asset Explorer & Filter Matrix
 ![Explorer Asset Management](./assets/02_explorer_asset_management.png)
-*Zero-latency asset explorer with multi-dimensional filtering, batch selection, ZIP streaming, and instant curation handoff.*
+*High-velocity asset management stream featuring 42 architectural demo assets, multi-select batch actions, ZIP export, and seamless one-click handoff to curation.*
 
 ### 3. Curation Desk, Uniqueness Verification & Edge LLM Copywriter
 ![Curation Desk & Social Copilot](./assets/03_curation_instagram_copilot.png)
-*Interactive curation workflow showing 100% uniqueness verification, carousel sequencing, and edge LLM caption synthesis.*
+*Interactive social curation studio showing 100% uniqueness verification, carousel sequencing, and edge LLM caption synthesis.*
 
 ### 4. Autonomous Curation & Autopilot Controller
 ![AI Curator & Autopilot](./assets/04_ai_curator_autopilot.png)
@@ -98,63 +135,24 @@ flowchart TD
 
 ---
 
-## ⚙️ Core Technical Engines Under the Hood
-
-### 1. Headless Workflow Compiler & Proxy (`app/core/comfy_ui_workflow.py` & `proxy.py`)
-- **LiteGraph Protocol Injection:** Standard ComfyUI API submissions only record execution nodes, stripping visual graph links. SpatialStudio dynamically builds complete LiteGraph canvas schemas (`nodes`, `links`, `extra_pnginfo`), injecting full visual workflow graphs into PNG headers. If opened in ComfyUI, users see a complete, connected canvas without missing wire errors.
-- **Autonomous Asset Sync:** The reverse proxy intercepts `/proxy/history/{prompt_id}` execution completions, downloads generated PNG buffers via ComfyUI's `/view` API or copies them from disk, and registers them directly into the target project library (`demo_library/`).
-
-### 2. Algorithmic Duplicate Prevention Gatekeeper (`app/core/anti_duplicate.py`)
-- **Perceptual Image Hashing:** Computes 64-bit DCT perceptual hash vectors (`pHash`) for every synthesized frame.
-- **Hamming Distance Verification:** Compares incoming hash footprints against all historical assets:
-  $$\text{Distance} = \frac{\text{popcount}(h_1 \oplus h_2)}{64}$$
-  If the visual similarity threshold exceeds 90% ($\text{Distance} \le 0.10$), the frame is flagged as a duplicate, preventing redundant social posts and saving costly GPU rendering time.
-
-### 3. Procedural Prompt Matrix & Deck Engine (`app/core/generator.py`)
-- **8-Axis Combinatorial Synthesis:** Procedural generator structuring prompts across:
-  1. `Vieta` (Architectural form, brutalist villas, Nordic pavilions, urban lofts)
-  2. `Kamera` (Focal length, drone orthographic, leading perspective lines)
-  3. `Oras` (Golden hour, atmospheric overcast, cinematic dusk)
-  4. `Scena` (Infinity pool reflections, interior courtyards, stepping slabs)
-  5. `Medžiagos` (Polished concrete, blackened timber, travertine marble)
-  6. `Fonas` (Alpine ridges, coastal shorelines, pine forests)
-  7. `Stilius` (Minimalist realism, editorial photography, architectural digest)
-  8. `Mixai` (Curated all-in-one comprehensive styles)
-- **Token Weight Balancing:** Dynamically manages positive/negative token weighting, LoRA triggers, and CFG scale calibration to eliminate prompt collisions.
-
-### 4. Edge LLM Copywriting Copilot (`app/core/assistant.py`)
-- **Metadata-Driven Prompt Decompilation:** Extracts raw EXIF and ComfyUI generation parameters directly from the image buffer.
-- **Local Ollama Integration:** Passes semantic tags into local quantized LLM models (e.g. `dolphin-llama3`, `gemma`) running at high speed (<0.8s response time).
-- **Style Personas:** Synthesizes platform-optimized captions tailored for specific brand voices (`Auto`, `Vibe`, `Hook`, `Lore`, `Promo`) with contextual hashtags.
-
-### 5. Multi-Account Curation & Autopilot (`app/core/curation.py`)
-- **Semantic Clustering & Interleaving:** Automatically groups orphan renders into carousel candidates (2 to 10 images). Employs an interleaving algorithm that prevents visual repetition by varying camera perspectives across adjacent frames.
-- **Background Cron Scheduler:** An asynchronous daemon (`scheduler_loop()`) continuously evaluates queued posts, monitoring publishing timestamps and dispatching scheduled content automatically.
-
-### 6. Zero-Trust Cloudflare Gateway (`app/core/tunnel.py` & `instagram.py`)
-- **Ephemeral Tunnel Management:** Spawns a background `cloudflared` tunnel, obtaining an authenticated public HTTPS hostname.
-- **Meta Graph API Compliance:** Instagram Graph API requires public, reachable image endpoints for container ingestion. The tunnel exposes local image buffers securely without opening inbound router ports or exposing static IP addresses.
-
----
-
 ## 🛠️ Technology Stack Breakdown
 
 | Layer | Technologies | Purpose |
 |---|---|---|
-| **Backend Runtime** | Python 3.10+, FastAPI, Uvicorn, AsyncIO | High-throughput async REST server & proxy |
-| **Generative Backend** | ComfyUI, PyTorch, CUDA | Headless diffusion execution (SDXL / Flux / Custom LoRAs) |
-| **Intelligence / NLP** | Ollama (Dolphin-Llama3, Gemma) | Local edge LLM inference for caption generation & tagging |
-| **Computer Vision** | Pillow (PIL), ImageHash, NumPy | Perceptual hashing, EXIF extraction, dynamic typography watermarking |
-| **Networking & APIs** | Meta Graph API v19+, Requests, Cloudflare Tunnel | Social publishing, OAuth2 token renewal, secure ingress |
+| **Backend Runtime** | Python 3.10+, FastAPI, Uvicorn, AsyncIO | High-throughput asynchronous REST server & proxy |
+| **Generative Compute** | ComfyUI, PyTorch, CUDA | Headless diffusion execution (SDXL / Flux / LoRA stacks) |
+| **Edge Intelligence** | Ollama (Dolphin-Llama3, Gemma) | Local quantized LLM inference for platform copywriting |
+| **Computer Vision** | Pillow (PIL), ImageHash, NumPy | Perceptual hashing (pHash), EXIF parsing, dynamic typography watermark |
+| **External Publishing** | Meta Graph API v19+, Patreon API, Cloudflare Tunnel | Automated carousel container creation & secure public asset ingress |
 | **Client Frontend** | HTML5, TailwindCSS, Vanilla ES6+ JavaScript | Zero-framework, low-latency responsive dashboard |
-| **State & Datastore** | JSON Atomic Writes, Caching Layer | State persistence, metadata index, duplicate hash repository |
+| **State Persistence** | Atomic JSON Datastores, Caching Layer | Uniqueness hash index, prompt deck, and curation state |
 
 ---
 
 ## 📁 Repository Structure
 
 ```text
-anime_content_studio/
+SpatialStudio-Pro/
 ├── app/
 │   ├── main.py                  # FastAPI server entry point & lifespan orchestrator
 │   ├── config.py                # Environment configs, default settings & base paths
@@ -164,7 +162,7 @@ anime_content_studio/
 │   │   ├── prompt_deck.json     # Combinatorial 8-axis card deck database
 │   │   └── settings.json        # Active profiles, API keys, ComfyUI endpoints
 │   └── core/
-│       ├── analyzer.py          # PNG chunk decoder, prompt parser & character extractor
+│       ├── analyzer.py          # PNG chunk decoder, prompt parser & metadata extractor
 │       ├── anti_duplicate.py    # Perceptual hash calculator & Hamming distance gate
 │       ├── assistant.py         # Local Ollama LLM client for caption generation
 │       ├── comfy_ui_workflow.py # Headless LiteGraph schema compiler & injector
@@ -182,10 +180,10 @@ anime_content_studio/
 │       ├── thematic.py           # Thematic Photoshoot Studio 2.0 multi-shot engine
 │       ├── tunnel.py             # Cloudflare tunnel background daemon manager
 │       └── watermark.py          # PIL alpha-composited brand overlay engine
-├── demo_library/                # Active project visual asset repository
+├── demo_library/                # Active visual asset library
 └── static/
     ├── index.html               # Single-page application interface
-    ├── css/style.css            # Custom design tokens & scrollbar styling
+    ├── css/style.css            # Custom design tokens & styling
     └── js/app_v2.js             # Client-side state machine, WebSocket listener & UI controllers
 ```
 
