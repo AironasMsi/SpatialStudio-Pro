@@ -1,5 +1,14 @@
 # SpatialStudio Pro — Autonomous Social Media Visual Factory & Generative Orchestrator
 
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10+-3776AB.svg?style=flat&logo=python&logoColor=white)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688.svg?style=flat&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![ComfyUI Headless](https://img.shields.io/badge/ComfyUI-Headless_Batch_Compute-blueviolet.svg?style=flat)](https://github.com/comfyanonymous/ComfyUI)
+[![Meta Graph API](https://img.shields.io/badge/Meta_Graph_API-Instagram_Carousel_%C2%B7_Reels-0081FB.svg?style=flat&logo=meta&logoColor=white)](https://developers.facebook.com/)
+[![Local LLM](https://img.shields.io/badge/Local_LLM-Ollama_%C2%B7_Dolphin_Llama3-FF6F00.svg?style=flat)](https://ollama.com/)
+[![CV Guardrails](https://img.shields.io/badge/CV_Guardrails-pHash_%C2%B7_OpenPose-007808.svg?style=flat)](README.md)
+[![Tunnel](https://img.shields.io/badge/Tunnel-Cloudflare_Tunnel-F38020.svg?style=flat&logo=cloudflare&logoColor=white)](https://www.cloudflare.com/)
+[![License: Showcase](https://img.shields.io/badge/License-Showcase_Portfolio-yellow.svg)](README.md)
+
 > **Enterprise Domain:** End-to-End Automated Social Media Content Production, Headless Diffusion Execution & Multi-Platform API Distribution  
 > **Core Backend:** Python 3.10+, FastAPI, Asynchronous Event-Driven Architecture (`asyncio`)  
 > **Inference Engines:** ComfyUI Headless Execution (PyTorch, CUDA), Local Edge LLMs (Ollama Dolphin-Llama3, Gemma)  
