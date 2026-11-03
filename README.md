@@ -165,38 +165,21 @@ SpatialStudio-Pro/
 ├── app/
 │   ├── main.py                  # FastAPI server entry point & lifespan orchestrator
 │   ├── config.py                # Environment configs, default settings & base paths
-│   ├── database/
-│   │   ├── curation_db.json     # Curation registry, ratings & post folder mapping
-│   │   ├── explorer_cache.json  # Indexed image metadata cache (resolution, prompts, LoRAs)
-│   │   ├── prompt_deck.json     # Combinatorial 8-axis card deck database
-│   │   └── settings.json        # Active profiles, API keys, ComfyUI endpoints
 │   └── core/
-│       ├── analyzer.py          # PNG chunk decoder, prompt parser & metadata extractor
-│       ├── anti_duplicate.py    # Perceptual hash calculator & Hamming distance gate
+│       ├── anti_duplicate.py    # Perceptual hash (pHash) Hamming distance gate
 │       ├── assistant.py         # Local Ollama LLM client for caption generation
-│       ├── comfy_ui_workflow.py # Headless LiteGraph schema compiler & injector
-│       ├── curation.py          # Autonomous carousel grouping, interleaving & scheduler
-│       ├── explorer.py          # High-performance asset scanner, filter engine & ZIP streamer
+│       ├── comfy_ui_workflow.py # Headless ComfyUI graph compiler & payload injector
+│       ├── curation.py          # Autonomous carousel grouping & scheduling engine
+│       ├── explorer.py          # Asset scanner, filter engine & prompt parser
 │       ├── generator.py         # Procedural prompt matrix composer & weight balancer
-│       ├── history_gallery.py   # Historical post archive & timeline tracker
-│       ├── image_in_image.py    # Multi-pass inpainting & latent compositing engine
-│       ├── instagram.py         # Meta Graph API connector (container create/status/publish)
-│       ├── loras.py              # LoRA directory scanner & trigger word resolver
-│       ├── patreon.py            # Patreon API membership & tiered post publisher
-│       ├── poses.py              # OpenPose skeleton analyzer & ControlNet injector
-│       ├── proxy.py              # ComfyUI reverse proxy, 403 bypass & auto-sync to library
-│       ├── settings_api.py       # Live configuration & profile manager
-│       ├── thematic.py           # Thematic Photoshoot Studio 2.0 multi-shot engine
-│       ├── tunnel.py             # Cloudflare tunnel background daemon manager
-│       └── watermark.py          # PIL alpha-composited brand overlay engine
-├── demo_library/                # Active visual asset library
+│       ├── instagram.py         # Meta Graph API connector (containers & publication)
+│       └── poses.py             # OpenPose skeleton analyzer & ControlNet injector
+├── requirements.txt
 └── static/
-    ├── index.html               # Single-page application interface
-    ├── css/style.css            # Custom design tokens & styling
-    └── js/app_v2.js             # Client-side state machine, WebSocket listener & UI controllers
+    ├── index.html               # Production studio single-page interface
+    └── js/app_v2.js             # Client-side state machine, WebSockets & UI controllers
 ```
 
 ---
-
 ## 🔒 Enterprise & Proprietary Notice
 *The architectural models, pipeline designs, and interface implementations shown here represent proprietary commercial and internal tooling developed by Aironas Žitkus. Core backend source files are maintained in private infrastructure; this showcase documents the systems engineering, algorithmic workflows, and production integrations.*
